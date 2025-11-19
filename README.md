@@ -180,7 +180,7 @@ flowchart TD
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ipl-analytics-platform.git
+git clone https://github.com/SurajAkhuli/ipl-analytics-platform.git
 cd ipl-analytics-platform
 ```
 
