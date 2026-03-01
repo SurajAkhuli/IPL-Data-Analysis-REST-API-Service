@@ -132,15 +132,15 @@ def batsmanAPI(batsman, balls=batter_data):
 bowler_data = batter_data.copy()
 
 def bowlerRun(x):
-    if x[0] in ['penalty', 'legbyes', 'byes']:
+    if x['extra_type'] in ['penalty', 'legbyes', 'byes']:
         return 0
     else:
-        return x[1]
+        return x['total_run']
 bowler_data['bowler_run'] = bowler_data[['extra_type', 'total_run']].apply(bowlerRun, axis=1)
 
 def bowlerWicket(x):
-    if x[0] in ['caught', 'caught and bowled', 'bowled', 'stumped', 'lbw', 'hit wicket']:
-        return x[1]
+    if x['kind'] in ['caught', 'caught and bowled', 'bowled', 'stumped', 'lbw', 'hit wicket']:
+        return x['isWicketDelivery']
     else:
         return 0
 bowler_data['isBowlerWicket'] = bowler_data[['kind', 'isWicketDelivery']].apply(bowlerWicket, axis=1)
