@@ -180,8 +180,8 @@ flowchart TD
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/SurajAkhuli/ipl-analytics-platform.git
-cd ipl-analytics-platform
+git clone https://github.com/SurajAkhuli/IPL-Data-Analysis-REST-API-Service.git
+cd IPL-Data-Analysis-REST-API-Service
 ```
 
 ### Install Dependencies
@@ -213,7 +213,7 @@ Place the following CSV files in the project root:
 #### Step 1: Start the REST API Service
 
 ```bash
-cd surajakhuli-ipl-apiservice
+cd IPL-Data-Analysis-REST-API-Service
 python app.py
 ```
 
@@ -224,7 +224,7 @@ The API service will start on `http://127.0.0.1:5000`
 Open a new terminal:
 
 ```bash
-cd surajakhuli-ipl-webapp
+cd IPL-WebApp
 python app.py
 ```
 
@@ -416,7 +416,7 @@ curl "http://127.0.0.1:5000/api/batting-record?batsman=Virat Kohli"
 ## 📁 Project Structure
 
 ```
-ipl-analytics-platform/
+IPL-Data-Analysis-REST-API-Service/
 │
 ├── surajakhuli-ipl-apiservice/          # REST API Service
 │   ├── app.py                           # API route definitions
@@ -426,7 +426,7 @@ ipl-analytics-platform/
 │       ├── IPL_Matches_2008_2022.csv
 │       └── IPL_Ball_by_Ball_2008_2022.csv
 │
-├── surajakhuli-ipl-webapp/              # Web Application
+├── IPL-WebApp/                          # Web Application
 │   ├── app.py                           # Web app routes
 │   └── templates/
 │       └── index.html                   # Main web interface
